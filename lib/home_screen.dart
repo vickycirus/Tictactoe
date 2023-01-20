@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tictaktoe/create_room_screen.dart';
+import 'package:tictaktoe/join_room_screen.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -24,7 +27,11 @@ class _HomeScreen extends State<HomeScreen> {
           ),
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const CreateRoomScreen(),
+                  ),
+                ),
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.blue),
                   textStyle:
@@ -40,7 +47,11 @@ class _HomeScreen extends State<HomeScreen> {
               ),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const JoinRoomScreen(),
+                  ),
+                ),
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.blue),
                   textStyle:
