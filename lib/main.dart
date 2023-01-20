@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tictaktoe/home_screen.dart';
+import 'package:tictaktoe/paint_screen.dart';
 
 void main() {
   runApp(const MyApp());
